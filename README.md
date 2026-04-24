@@ -288,7 +288,7 @@ The following tools and resources are used in this manual QA process:
 | Test scope | Completed |
 | Test strategy | Completed |
 | Test cases | Completed |
-| Test execution cycle | Pending |
+| Test execution cycle | In Progress |
 | Bug reports | Pending |
 | Final QA report | Pending |
 

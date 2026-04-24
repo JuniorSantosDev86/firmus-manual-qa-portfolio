@@ -10,7 +10,7 @@
 | Execution Cycle | Cycle 01 |
 | Tester | Ademir dos Santos Junior |
 | Version | 1.0 |
-| Status | Not Started |
+| Status | In Progress|
 
 ---
 
@@ -72,9 +72,9 @@ The following items are not part of this execution cycle:
 
 | Field | Information |
 |---|---|
-| Execution Date | YYYY-MM-DD |
+| Execution Date | 2026-04-24|
 | Environment | Local development |
-| Application URL | http://localhost:3000 or current local URL |
+| Application URL | http://localhost:3000  |
 | Browser | Google Chrome / Chromium-based browser |
 | Operating System | Ubuntu Linux |
 | Device | Desktop / Notebook |
@@ -101,61 +101,62 @@ Before starting the execution cycle, confirm the following items:
 
 | ID | Checkpoint | Status | Notes |
 |---|---|---|---|
-| PRE-001 | Firmus application is running locally | Not Executed |  |
-| PRE-002 | Browser is available and updated | Not Executed |  |
-| PRE-003 | Tester can access the application URL | Not Executed |  |
-| PRE-004 | Valid test credentials are available | Not Executed |  |
-| PRE-005 | Test data is available or can be created | Not Executed |  |
-| PRE-006 | Evidence folders are available | Not Executed |  |
-| PRE-007 | Bug report template is available | Not Executed |  |
-| PRE-008 | Test cases are ready for execution | Not Executed |  |
-
+| PRE-001 | Firmus application is running locally | Passed | Application running locally |
+| PRE-002 | Browser is available and updated | Passed | Google Chrome available |
+| PRE-003 | Tester can access the application URL | Passed | Application URL opened successfully |
+| PRE-004 | Valid test credentials are available | Passed | Test credentials available |
+| PRE-005 | Test data is available or can be created | Passed | Local test data available or can be created |
+| PRE-006 | Evidence folders are available | Passed | evidences/screenshots and evidences/videos folders available |
+| PRE-007 | Bug report template is available | Passed | Template available in bug-reports folder |
+| PRE-008 | Test cases are ready for execution | Passed | Test case files available in test-cases folder |
 ---
 
 ## 8. Execution Summary
 
 | Status | Total |
 |---|---:|
-| Passed | 0 |
+| Passed | 12 |
 | Failed | 0 |
 | Blocked | 0 |
 | Not Applicable | 0 |
-| Not Executed | 78 |
+| Not Executed | 66 |
 
 ---
+
 
 ## 9. Module Summary
 
 | Module | Total Test Cases | Passed | Failed | Blocked | Not Applicable | Not Executed |
 |---|---:|---:|---:|---:|---:|---:|
-| Authentication | 12 | 0 | 0 | 0 | 0 | 12 |
+| Authentication | 12 | 12 | 0 | 0 | 0 | 0 |
 | Dashboard / Control Tower | 12 | 0 | 0 | 0 | 0 | 12 |
 | Clients | 12 | 0 | 0 | 0 | 0 | 12 |
 | Quotes | 14 | 0 | 0 | 0 | 0 | 14 |
 | Financial Overview | 14 | 0 | 0 | 0 | 0 | 14 |
 | NFSe Foundation | 14 | 0 | 0 | 0 | 0 | 14 |
-| Total | 78 | 0 | 0 | 0 | 0 | 78 |
-
+| Total | 78 | 12 | 0 | 0 | 0 | 66 |
 ---
 
 ## 10. Detailed Test Execution
 
 ### 10.1 Authentication
 
+### 10.1 Authentication
+
 | Test Case ID | Test Case Title | Status | Actual Result | Evidence | Bug ID | Notes |
 |---|---|---|---|---|---|---|
-| TC-AUTH-001 | Login with valid credentials | Not Executed |  |  |  |  |
-| TC-AUTH-002 | Login with invalid email | Not Executed |  |  |  |  |
-| TC-AUTH-003 | Login with invalid password | Not Executed |  |  |  |  |
-| TC-AUTH-004 | Login with empty email field | Not Executed |  |  |  |  |
-| TC-AUTH-005 | Login with empty password field | Not Executed |  |  |  |  |
-| TC-AUTH-006 | Login with both fields empty | Not Executed |  |  |  |  |
-| TC-AUTH-007 | Access protected route without authentication | Not Executed |  |  |  |  |
-| TC-AUTH-008 | Access protected route after login | Not Executed |  |  |  |  |
-| TC-AUTH-009 | Logout from authenticated session | Not Executed |  |  |  |  |
-| TC-AUTH-010 | Access protected route after logout | Not Executed |  |  |  |  |
-| TC-AUTH-011 | Refresh page while authenticated | Not Executed |  |  |  |  |
-| TC-AUTH-012 | Login page visual and usability validation | Not Executed |  |  |  |  |
+| TC-AUTH-001 | Login with valid credentials | Passed | Login worked successfully and the user was redirected to the dashboard. | evidences/screenshots/TC-AUTH-001-login-success.png | - | Critical login flow worked as expected. |
+| TC-AUTH-002 | Login with invalid email | Passed | Invalid credentials were rejected by the system. | - | - | Authentication validation worked as expected. |
+| TC-AUTH-003 | Login with invalid password | Passed | Invalid password was rejected by the system. | - | - | User remained unauthenticated. |
+| TC-AUTH-004 | Login with empty email field | Passed | Login was blocked when the email field was empty. | - | - | Required field validation worked as expected. |
+| TC-AUTH-005 | Login with empty password field | Passed | Login was blocked when the password field was empty. | - | - | Required field validation worked as expected. |
+| TC-AUTH-006 | Login with both fields empty | Passed | Login was blocked when both fields were empty. | - | - | Required field validation worked as expected. |
+| TC-AUTH-007 | Access protected route without authentication | Passed | Protected route access was blocked and the user was redirected. | - | - | Route protection worked as expected. |
+| TC-AUTH-008 | Access protected route after login | Passed | Protected route was accessible after successful login. | - | - | Authenticated access worked as expected. |
+| TC-AUTH-009 | Logout from authenticated session | Passed | Logout worked successfully. | - | - | User session was ended as expected. |
+| TC-AUTH-010 | Access protected route after logout | Passed | Protected route access was blocked after logout. | - | - | Post-logout route protection worked as expected. |
+| TC-AUTH-011 | Refresh page while authenticated | Passed | Page refresh preserved the authenticated session. | - | - | Session behavior worked as expected. |
+| TC-AUTH-012 | Login page visual and usability validation | Passed | Login page was clear, readable and usable. | - | - | Login UI passed basic usability validation. |
 
 ---
 
@@ -272,21 +273,13 @@ Before starting the execution cycle, confirm the following items:
 
 | Evidence ID | Related Test Case | Related Bug ID | Evidence Type | File Path | Notes |
 |---|---|---|---|---|---|
-| - | - | - | - | - | - |
+| EVD-001 | TC-AUTH-001 | - | Screenshot | evidences/screenshots/TC-AUTH-001-login-success.png | Successful login redirected the user to the dashboard. |
 
 Evidence should be stored in:
 
 ```txt
 evidences/screenshots/
 evidences/videos/
-```
-
-Recommended evidence naming examples:
-
-```txt
-TC-AUTH-001-login-success.png
-BUG-001-dashboard-access-after-logout.png
-BUG-002-mobile-navigation-not-opening.mp4
 ```
 
 ---
@@ -316,13 +309,13 @@ To be filled during execution.
 
 | Field | Result |
 |---|---|
-| Execution Started | No |
+| Execution Started | Yes |
 | Execution Completed | No |
 | Critical Bugs Found | 0 |
 | High Bugs Found | 0 |
 | Medium Bugs Found | 0 |
 | Low Bugs Found | 0 |
-| Overall Result | Not executed |
+| Overall Result | In progress |
 
 ---
 
