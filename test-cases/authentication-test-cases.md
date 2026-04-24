@@ -8,7 +8,7 @@
 | System Under Test | Firmus Application |
 | Module | Authentication |
 | Test Type | Manual Functional Testing |
-| Tester | Junior Santos |
+| Tester | Ademir dos Santos Junior |
 | Version | 1.0 |
 | Status | In progress |
 
