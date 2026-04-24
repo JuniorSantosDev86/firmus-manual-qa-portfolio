@@ -286,7 +286,7 @@ The following tools and resources are used in this manual QA process:
 | README documentation | Completed |
 | Test plan | Completed |
 | Test scope | Completed |
-| Test strategy | Pending |
+| Test strategy | Completed |
 | Test cases | Pending |
 | Test execution cycle | Pending |
 | Bug reports | Pending |

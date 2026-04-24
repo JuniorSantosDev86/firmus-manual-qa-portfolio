@@ -286,7 +286,7 @@ Os seguintes recursos são utilizados neste processo de QA manual:
 | Documentação do README | Concluído |
 | Test plan | Concluído |
 | Test scope | Concluído |
-| Test strategy | Pendente |
+| Test strategy | Concluído |
 | Casos de teste | Pendente |
 | Ciclo de execução | Pendente |
 | Bug reports | Pendente |
