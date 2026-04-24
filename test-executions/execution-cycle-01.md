@@ -115,12 +115,11 @@ Before starting the execution cycle, confirm the following items:
 
 | Status | Total |
 |---|---:|
-| Passed | 24 |
-| Failed | 0 |
+| Passed | 34 |
+| Failed | 2 |
 | Blocked | 0 |
 | Not Applicable | 0 |
-| Not Executed | 54 |
-
+| Not Executed | 42 |
 ---
 
 
@@ -130,11 +129,11 @@ Before starting the execution cycle, confirm the following items:
 |---|---:|---:|---:|---:|---:|---:|
 | Authentication | 12 | 12 | 0 | 0 | 0 | 0 |
 | Dashboard / Control Tower | 12 | 12 | 0 | 0 | 0 | 0 |
-| Clients | 12 | 0 | 0 | 0 | 0 | 12 |
+| Clients | 12 | 10 | 2 | 0 | 0 | 0 |
 | Quotes | 14 | 0 | 0 | 0 | 0 | 14 |
 | Financial Overview | 14 | 0 | 0 | 0 | 0 | 14 |
 | NFSe Foundation | 14 | 0 | 0 | 0 | 0 | 14 |
-| Total | 78 | 24 | 0 | 0 | 0 | 54 |
+| Total | 78 | 34 | 2 | 0 | 0 | 42 |
 ---
 
 ## 10. Detailed Test Execution
@@ -178,22 +177,23 @@ Before starting the execution cycle, confirm the following items:
 | TC-DASH-012 | Dashboard visual hierarchy is clear | Passed | Dashboard visual hierarchy was clear. | - | - | Important operational information was easy to identify. |
 ---
 
+
 ### 10.3 Clients
 
 | Test Case ID | Test Case Title | Status | Actual Result | Evidence | Bug ID | Notes |
 |---|---|---|---|---|---|---|
-| TC-CLI-001 | Clients page loads successfully | Not Executed |  |  |  |  |
-| TC-CLI-002 | Clients list is visible when records exist | Not Executed |  |  |  |  |
-| TC-CLI-003 | Clients empty state is clear when no records exist | Not Executed |  |  |  |  |
-| TC-CLI-004 | Create client action is visible when available | Not Executed |  |  |  |  |
-| TC-CLI-005 | Create client with valid required information | Not Executed |  |  |  |  |
-| TC-CLI-006 | Create client with required fields empty | Not Executed |  |  |  |  |
-| TC-CLI-007 | Create client with invalid contact information | Not Executed |  |  |  |  |
-| TC-CLI-008 | Client details are visible when opening a client record | Not Executed |  |  |  |  |
-| TC-CLI-009 | Client-related navigation works correctly | Not Executed |  |  |  |  |
-| TC-CLI-010 | Clients page does not display broken or placeholder information | Not Executed |  |  |  |  |
-| TC-CLI-011 | Clients page remains usable after refresh | Not Executed |  |  |  |  |
-| TC-CLI-012 | Clients page is usable on mobile-like viewport | Not Executed |  |  |  |  |
+| TC-CLI-001 | Clients page loads successfully | Passed | Clients page loaded successfully. |  | - | Clients module was accessible and usable. |
+| TC-CLI-002 | Clients list is visible when records exist | Passed | Existing clients were displayed correctly. | - | - | Client list was visible and readable. |
+| TC-CLI-003 | Clients empty state is clear when no records exist | Passed | Empty state behavior was validated successfully when applicable. | - | - | Empty state did not appear broken. |
+| TC-CLI-004 | Create client action is visible when available | Passed | Create client action was visible and accessible. | - | - | User could access the client creation flow. |
+| TC-CLI-005 | Create client with valid required information | Passed | Client was created successfully with valid information. | - | - | Valid client creation worked as expected. |
+| TC-CLI-006 | Create client with required fields empty | Failed | The system allowed client creation with only the client name filled and no other required data. | evidences/screenshots/BUG-001-client-created-with-only-name.png | BUG-001 | Required field validation did not prevent incomplete client creation. |
+| TC-CLI-007 | Create client with invalid contact information | Failed | The system allowed client creation without contact information or with invalid contact information. | evidences/screenshots/BUG-002-client-invalid-contact-accepted.png | BUG-002 | Contact information validation did not work as expected. |
+| TC-CLI-008 | Client details are visible when opening a client record | Passed | Client details were visible when opening a client record. | - | - | Client information was readable. |
+| TC-CLI-009 | Client-related navigation works correctly | Passed | Client-related navigation worked correctly. | - | - | No broken navigation was observed in the tested flow. |
+| TC-CLI-010 | Clients page does not display broken or placeholder information | Passed | No broken or placeholder information was observed. | - | - | Clients page looked consistent. |
+| TC-CLI-011 | Clients page remains usable after refresh | Passed | Clients page remained usable after refresh. | - | - | Refresh behavior worked as expected. |
+| TC-CLI-012 | Clients page is usable on mobile-like viewport | Passed | Clients page remained usable on mobile-like viewport. | - | - | Mobile-like layout passed validation. |
 
 ---
 
@@ -264,7 +264,9 @@ Before starting the execution cycle, confirm the following items:
 
 | Bug ID | Title | Module | Severity | Priority | Status | Evidence |
 |---|---|---|---|---|---|---|
-| - | - | - | - | - | - | - |
+| BUG-001 | Client can be created with only the name field filled | Clients | Medium | Medium | Open | evidences/screenshots/BUG-001-client-created-with-only-name.png |
+| BUG-002 | Client can be created without valid contact information | Clients | Medium | Medium | Open | evidences/screenshots/BUG-002-client-invalid-contact-accepted.png |
+| BUG-003 | Delete client action does not remove the client after confirmation | Clients | High | High | Open | evidences/screenshots/BUG-003-delete-client-not-working.png |
 
 ---
 
@@ -273,13 +275,15 @@ Before starting the execution cycle, confirm the following items:
 | Evidence ID | Related Test Case | Related Bug ID | Evidence Type | File Path | Notes |
 |---|---|---|---|---|---|
 | EVD-001 | TC-AUTH-001 | - | Screenshot | evidences/screenshots/TC-AUTH-001-login-success.png | Successful login redirected the user to the dashboard. |
+| EVD-002 | TC-CLI-006 | BUG-001 | Screenshot | evidences/screenshots/BUG-001-client-created-with-only-name.png | Client was created with only the name field filled. |
+| EVD-003 | TC-CLI-007 | BUG-002 | Screenshot | evidences/screenshots/BUG-002-client-invalid-contact-accepted.png | Client was created without valid contact information or with invalid contact information. |
+| EVD-004 | Exploratory finding | BUG-003 | Screenshot | evidences/screenshots/BUG-003-delete-client-not-working.png | Delete client confirmation did not remove the client. |
 
 Evidence should be stored in:
 
 ```txt
 evidences/screenshots/
 evidences/videos/
-```
 
 ---
 
@@ -311,8 +315,8 @@ To be filled during execution.
 | Execution Started | Yes |
 | Execution Completed | No |
 | Critical Bugs Found | 0 |
-| High Bugs Found | 0 |
-| Medium Bugs Found | 0 |
+| High Bugs Found | 1 |
+| Medium Bugs Found | 2 |
 | Low Bugs Found | 0 |
 | Overall Result | In progress |
 
