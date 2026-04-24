@@ -1,8 +1,8 @@
 # Firmus Manual QA Portfolio
 
-Projeto de portfólio em QA Manual que documenta planejamento de testes, casos de teste, relatórios de bugs, execuções de teste e evidências de QA para a aplicação Firmus.
+Projeto de portfólio em QA Manual que documenta planejamento de testes, escopo de testes, casos de teste, relatórios de bugs, execuções de teste e evidências de QA para a aplicação Firmus.
 
-> English version available here: [README.md](./README.md)
+> English version: [README.md](./README.md)
 
 ---
 
@@ -10,7 +10,7 @@ Projeto de portfólio em QA Manual que documenta planejamento de testes, casos d
 
 Este repositório apresenta um processo completo de **Quality Assurance Manual** aplicado ao **Firmus**, uma aplicação web criada para apoiar prestadores de serviço e pequenos negócios em suas rotinas operacionais.
 
-O principal objetivo deste portfólio é demonstrar habilidades práticas de QA por meio de documentação estruturada, planejamento de testes, criação de casos de teste manuais, reporte de bugs, coleta de evidências e relatórios de execução.
+O principal objetivo deste portfólio é demonstrar habilidades práticas de QA por meio de documentação estruturada, planejamento de testes, definição de escopo, criação de casos de teste manuais, reporte de bugs, coleta de evidências e relatórios de execução.
 
 Este projeto faz parte de um portfólio profissional de QA com foco em práticas reais de teste de software.
 
@@ -58,7 +58,8 @@ Este portfólio inclui as seguintes atividades de QA:
 
 | Área | Descrição |
 |---|---|
-| Planejamento de Testes | Definição de escopo, riscos, objetivos e entregáveis |
+| Planejamento de Testes | Definição de objetivos, riscos, recursos, critérios e entregáveis |
+| Escopo de Testes | Definição de módulos, fluxos e áreas cobertas pelos testes manuais |
 | Estratégia de Testes | Abordagem de testes manuais e tipos de teste utilizados |
 | Criação de Casos de Teste | Casos estruturados com passos, resultados esperados e status |
 | Testes Funcionais | Validação dos fluxos principais da aplicação |
@@ -121,38 +122,53 @@ firmus-manual-qa-portfolio/
 └── test-executions/
     ├── execution-cycle-01.md
     └── execution-summary.md
-Artefatos de QA
+```
+
+---
+
+## Artefatos de QA
 
 Este repositório contém os seguintes artefatos de QA:
 
-Documentação
-Test Plan
-Test Scope
-Test Strategy
-Severity and Priority Guide
-Final Test Report
-Design de Testes
-Casos de teste de autenticação
-Casos de teste de dashboard
-Casos de teste de clientes
-Casos de teste de orçamentos
-Casos de teste financeiros
-Casos de teste de NFSe
-Execução de Testes
-Ciclo manual de execução
-Resumo de execução
-Checklist de smoke test
-Checklist de regression test
-Checklist de responsive test
-Checklist de exploratory test
-Reporte de Bugs
-Template de bug report
-Exemplos de bug reports
-Documentação baseada em evidências
-Formato dos Casos de Teste
+### Documentação
+
+- Test Plan
+- Test Scope
+- Test Strategy
+- Severity and Priority Guide
+- Final Test Report
+
+### Design de Testes
+
+- Casos de teste de autenticação
+- Casos de teste de dashboard
+- Casos de teste de clientes
+- Casos de teste de orçamentos
+- Casos de teste financeiros
+- Casos de teste de NFSe
+
+### Execução de Testes
+
+- Ciclo manual de execução
+- Resumo de execução
+- Checklist de smoke test
+- Checklist de regression test
+- Checklist de responsive test
+- Checklist de exploratory test
+
+### Reporte de Bugs
+
+- Template de bug report
+- Exemplos de bug reports
+- Documentação baseada em evidências
+
+---
+
+## Formato dos Casos de Teste
 
 Cada caso de teste segue uma estrutura organizada:
 
+```txt
 ID do Caso de Teste
 Título
 Módulo
@@ -166,9 +182,11 @@ Resultado atual
 Status
 Evidência
 Observações
+```
 
 Exemplo:
 
+```txt
 TC-AUTH-001 — Login com credenciais válidas
 
 Módulo: Authentication
@@ -192,10 +210,15 @@ O usuário deve ser autenticado e redirecionado para o dashboard.
 
 Status:
 Not executed
-Formato do Bug Report
+```
+
+---
+
+## Formato do Bug Report
 
 Os bug reports seguem uma estrutura profissional:
 
+```txt
 Bug ID
 Título
 Ambiente
@@ -207,81 +230,111 @@ Resultado atual
 Resultado esperado
 Evidência
 Observações adicionais
+```
 
 Esse formato ajuda a garantir que cada bug report seja claro, reproduzível e útil para desenvolvedores.
 
-Severidade e Prioridade
+---
 
-Este projeto separa severidade de prioridade.
+## Severidade e Prioridade
 
-Severidade descreve o impacto do problema no sistema.
+Este projeto separa **severidade** de **prioridade**.
 
-Prioridade descreve a urgência com que o problema deve ser corrigido.
+**Severidade** descreve o impacto do problema no sistema.
 
-Exemplo:
+**Prioridade** descreve a urgência com que o problema deve ser corrigido.
 
-Severidade	Significado
-Critical	Bloqueia um fluxo crítico ou impede o uso do sistema
-High	Afeta uma funcionalidade importante sem workaround simples
-Medium	Afeta uma funcionalidade, mas existe workaround
-Low	Problema visual, textual ou pequeno problema de usabilidade
-Prioridade	Significado
-High	Deve ser corrigido o quanto antes
-Medium	Deve ser corrigido em um ciclo planejado
-Low	Pode ser corrigido depois
-Ferramentas Utilizadas
+### Severidade
+
+| Severidade | Significado |
+|---|---|
+| Critical | Bloqueia um fluxo crítico ou impede o uso do sistema |
+| High | Afeta uma funcionalidade importante sem workaround simples |
+| Medium | Afeta uma funcionalidade, mas existe workaround |
+| Low | Problema visual, textual ou pequeno problema de usabilidade |
+
+### Prioridade
+
+| Prioridade | Significado |
+|---|---|
+| High | Deve ser corrigido o quanto antes |
+| Medium | Deve ser corrigido em um ciclo planejado |
+| Low | Pode ser corrigido depois |
+
+---
+
+## Ferramentas Utilizadas
 
 Os seguintes recursos são utilizados neste processo de QA manual:
 
-GitHub
-Markdown
-Browser DevTools
-Screenshots
-Evidências em vídeo
-Testes exploratórios manuais
-Ambiente local da aplicação
-Boas práticas de documentação em QA
-Status Atual
-Área	Status
-Estrutura do repositório	Concluído
-Documentação do README	Concluído
-Test plan	Completo
-Test strategy	Pendente
-Casos de teste	Pendente
-Ciclo de execução	Pendente
-Bug reports	Pendente
-Relatório final de QA	Pendente
-Habilidades Profissionais Demonstradas
+- GitHub
+- Markdown
+- Browser DevTools
+- Screenshots
+- Evidências em vídeo
+- Testes exploratórios manuais
+- Ambiente local da aplicação
+- Boas práticas de documentação em QA
+
+---
+
+## Status Atual
+
+| Área | Status |
+|---|---|
+| Estrutura do repositório | Concluído |
+| Documentação do README | Concluído |
+| Test plan | Concluído |
+| Test scope | Concluído |
+| Test strategy | Pendente |
+| Casos de teste | Pendente |
+| Ciclo de execução | Pendente |
+| Bug reports | Pendente |
+| Relatório final de QA | Pendente |
+
+---
+
+## Habilidades Profissionais Demonstradas
 
 Este projeto demonstra as seguintes habilidades de QA:
 
-Testes manuais
-Planejamento de testes
-Criação de casos de teste
-Reporte de bugs
-Testes funcionais
-Regression testing
-Smoke testing
-Exploratory testing
-Responsive testing
-Coleta de evidências
-Documentação técnica
-Pensamento orientado à qualidade
-Comunicação de resultados
-Sobre o Tester
+- Testes manuais
+- Planejamento de testes
+- Definição de escopo de testes
+- Criação de casos de teste
+- Reporte de bugs
+- Testes funcionais
+- Regression testing
+- Smoke testing
+- Exploratory testing
+- Responsive testing
+- Coleta de evidências
+- Documentação técnica
+- Pensamento orientado à qualidade
+- Comunicação de resultados
 
-Ademir dos Santos Junior
+---
+
+## Sobre o Tester
+
+**Ademir dos Santos Junior**  
 QA Analyst | Full Stack Developer
 
 Estou construindo um portfólio profissional em QA com foco em atividades práticas de teste, documentação realista e validação manual de aplicações web.
 
 Este repositório faz parte do meu processo de desenvolvimento profissional em Quality Assurance, combinando fundamentos de testes manuais com experiência em desenvolvimento de software.
 
-Projetos Relacionados
-Firmus Application
-Cypress Mini Shop QA
-Manual QA Tests — SauceDemo Login
-Propósito do Repositório
+---
+
+## Projetos Relacionados
+
+- [Firmus Application](https://github.com/JuniorSantosDev86/firmus-app)
+- [Cypress Mini Shop QA](https://github.com/JuniorSantosDev86/cypress-mini-shop-qa)
+- [Manual QA Tests — SauceDemo Login](https://github.com/JuniorSantosDev86/qa-manual-tests-saucedemo-login)
+
+---
+
+## Propósito do Repositório
 
 Este repositório foi criado para mostrar um fluxo completo e organizado de QA manual aplicado a uma aplicação real.
 
