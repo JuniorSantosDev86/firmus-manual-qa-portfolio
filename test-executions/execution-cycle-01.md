@@ -115,11 +115,11 @@ Before starting the execution cycle, confirm the following items:
 
 | Status | Total |
 |---|---:|
-| Passed | 12 |
+| Passed | 24 |
 | Failed | 0 |
 | Blocked | 0 |
 | Not Applicable | 0 |
-| Not Executed | 66 |
+| Not Executed | 54 |
 
 ---
 
@@ -129,12 +129,12 @@ Before starting the execution cycle, confirm the following items:
 | Module | Total Test Cases | Passed | Failed | Blocked | Not Applicable | Not Executed |
 |---|---:|---:|---:|---:|---:|---:|
 | Authentication | 12 | 12 | 0 | 0 | 0 | 0 |
-| Dashboard / Control Tower | 12 | 0 | 0 | 0 | 0 | 12 |
+| Dashboard / Control Tower | 12 | 12 | 0 | 0 | 0 | 0 |
 | Clients | 12 | 0 | 0 | 0 | 0 | 12 |
 | Quotes | 14 | 0 | 0 | 0 | 0 | 14 |
 | Financial Overview | 14 | 0 | 0 | 0 | 0 | 14 |
 | NFSe Foundation | 14 | 0 | 0 | 0 | 0 | 14 |
-| Total | 78 | 12 | 0 | 0 | 0 | 66 |
+| Total | 78 | 24 | 0 | 0 | 0 | 54 |
 ---
 
 ## 10. Detailed Test Execution
@@ -164,19 +164,18 @@ Before starting the execution cycle, confirm the following items:
 
 | Test Case ID | Test Case Title | Status | Actual Result | Evidence | Bug ID | Notes |
 |---|---|---|---|---|---|---|
-| TC-DASH-001 | Dashboard loads after successful login | Not Executed |  |  |  |  |
-| TC-DASH-002 | Dashboard main sections are visible | Not Executed |  |  |  |  |
-| TC-DASH-003 | Operational summary cards are displayed correctly | Not Executed |  |  |  |  |
-| TC-DASH-004 | Next actions section is visible and understandable | Not Executed |  |  |  |  |
-| TC-DASH-005 | Recent activities section is visible and readable | Not Executed |  |  |  |  |
-| TC-DASH-006 | Dashboard navigation links or shortcuts work correctly | Not Executed |  |  |  |  |
-| TC-DASH-007 | Dashboard does not expose broken or duplicated information | Not Executed |  |  |  |  |
-| TC-DASH-008 | Dashboard empty states are clear when no data is available | Not Executed |  |  |  |  |
-| TC-DASH-009 | Dashboard remains usable after page refresh | Not Executed |  |  |  |  |
-| TC-DASH-010 | Dashboard is readable on desktop viewport | Not Executed |  |  |  |  |
-| TC-DASH-011 | Dashboard is usable on mobile-like viewport | Not Executed |  |  |  |  |
-| TC-DASH-012 | Dashboard visual hierarchy is clear | Not Executed |  |  |  |  |
-
+| TC-DASH-001 | Dashboard loads after successful login | Passed | Dashboard loaded successfully after login. | evidences/screenshots/TC-DASH-001-dashboard-loaded.png | - | Main dashboard entry point worked as expected. |
+| TC-DASH-002 | Dashboard main sections are visible | Passed | Main dashboard sections were visible. | - | - | Dashboard structure was displayed correctly. |
+| TC-DASH-003 | Operational summary cards are displayed correctly | Passed | Operational summary cards were displayed correctly. | - | - | Summary cards were readable and organized. |
+| TC-DASH-004 | Next actions section is visible and understandable | Passed | Next actions section was visible and understandable. | - | - | Action labels and statuses were clear. |
+| TC-DASH-005 | Recent activities section is visible and readable | Passed | Recent activities section was visible and readable. | - | - | Activity information was clear. |
+| TC-DASH-006 | Dashboard navigation links or shortcuts work correctly | Passed | Dashboard navigation links and shortcuts worked correctly. | - | - | Navigation from dashboard behaved as expected. |
+| TC-DASH-007 | Dashboard does not expose broken or duplicated information | Passed | No broken or duplicated dashboard information was observed. | - | - | Dashboard content looked consistent. |
+| TC-DASH-008 | Dashboard empty states are clear when no data is available | Passed | Dashboard empty states were clear when applicable. | - | - | Empty-state behavior was acceptable in the current environment. |
+| TC-DASH-009 | Dashboard remains usable after page refresh | Passed | Dashboard remained usable after page refresh. | - | - | Refresh behavior worked as expected. |
+| TC-DASH-010 | Dashboard is readable on desktop viewport | Passed | Dashboard was readable and organized on desktop viewport. | - | - | Desktop layout passed validation. |
+| TC-DASH-011 | Dashboard is usable on mobile-like viewport | Passed | Dashboard remained usable on mobile-like viewport. | - | - | Mobile-like layout passed validation. |
+| TC-DASH-012 | Dashboard visual hierarchy is clear | Passed | Dashboard visual hierarchy was clear. | - | - | Important operational information was easy to identify. |
 ---
 
 ### 10.3 Clients
