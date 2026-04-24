@@ -164,7 +164,7 @@ Before starting the execution cycle, confirm the following items:
 
 | Test Case ID | Test Case Title | Status | Actual Result | Evidence | Bug ID | Notes |
 |---|---|---|---|---|---|---|
-| TC-DASH-001 | Dashboard loads after successful login | Passed | Dashboard loaded successfully after login. | evidences/screenshots/TC-DASH-001-dashboard-loaded.png | - | Main dashboard entry point worked as expected. |
+| TC-DASH-001 | Dashboard loads after successful login | Passed | Dashboard loaded successfully after login. | | - | Main dashboard entry point worked as expected. |
 | TC-DASH-002 | Dashboard main sections are visible | Passed | Main dashboard sections were visible. | - | - | Dashboard structure was displayed correctly. |
 | TC-DASH-003 | Operational summary cards are displayed correctly | Passed | Operational summary cards were displayed correctly. | - | - | Summary cards were readable and organized. |
 | TC-DASH-004 | Next actions section is visible and understandable | Passed | Next actions section was visible and understandable. | - | - | Action labels and statuses were clear. |
