@@ -287,7 +287,7 @@ Os seguintes recursos são utilizados neste processo de QA manual:
 | Test plan | Concluído |
 | Test scope | Concluído |
 | Test strategy | Concluído |
-| Casos de teste | Pendente |
+| Casos de teste | Em Progresso |
 | Ciclo de execução | Pendente |
 | Bug reports | Pendente |
 | Relatório final de QA | Pendente |
