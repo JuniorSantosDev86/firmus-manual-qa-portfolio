@@ -245,7 +245,7 @@ Current Status
 Area	Status
 Repository structure	Completed
 README documentation	In progress
-Test plan	Pending
+Test plan	Completed
 Test strategy	Pending
 Test cases	Pending
 Test execution cycle	Pending

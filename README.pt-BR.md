@@ -245,7 +245,7 @@ Status Atual
 Área	Status
 Estrutura do repositório	Concluído
 Documentação do README	Concluído
-Test plan	Pendente
+Test plan	Completo
 Test strategy	Pendente
 Casos de teste	Pendente
 Ciclo de execução	Pendente
