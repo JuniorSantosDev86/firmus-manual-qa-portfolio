@@ -115,11 +115,11 @@ Before starting the execution cycle, confirm the following items:
 
 | Status | Total |
 |---|---:|
-| Passed | 34 |
-| Failed | 2 |
+| Passed | 45 |
+| Failed | 5 |
 | Blocked | 0 |
 | Not Applicable | 0 |
-| Not Executed | 42 |
+| Not Executed | 28 |
 ---
 
 
@@ -130,10 +130,10 @@ Before starting the execution cycle, confirm the following items:
 | Authentication | 12 | 12 | 0 | 0 | 0 | 0 |
 | Dashboard / Control Tower | 12 | 12 | 0 | 0 | 0 | 0 |
 | Clients | 12 | 10 | 2 | 0 | 0 | 0 |
-| Quotes | 14 | 0 | 0 | 0 | 0 | 14 |
+| Quotes | 14 | 11 | 3 | 0 | 0 | 0 |
 | Financial Overview | 14 | 0 | 0 | 0 | 0 | 14 |
 | NFSe Foundation | 14 | 0 | 0 | 0 | 0 | 14 |
-| Total | 78 | 34 | 2 | 0 | 0 | 42 |
+| Total | 78 | 45 | 5 | 0 | 0 | 28 |
 ---
 
 ## 10. Detailed Test Execution
@@ -201,20 +201,20 @@ Before starting the execution cycle, confirm the following items:
 
 | Test Case ID | Test Case Title | Status | Actual Result | Evidence | Bug ID | Notes |
 |---|---|---|---|---|---|---|
-| TC-QUO-001 | Quotes page loads successfully | Not Executed |  |  |  |  |
-| TC-QUO-002 | Quotes list is visible when records exist | Not Executed |  |  |  |  |
-| TC-QUO-003 | Quotes empty state is clear when no records exist | Not Executed |  |  |  |  |
-| TC-QUO-004 | Create quote action is visible when available | Not Executed |  |  |  |  |
-| TC-QUO-005 | Create quote with valid required information | Not Executed |  |  |  |  |
-| TC-QUO-006 | Create quote with required fields empty | Not Executed |  |  |  |  |
-| TC-QUO-007 | Create quote with invalid monetary value | Not Executed |  |  |  |  |
-| TC-QUO-008 | Quote status is visible and understandable | Not Executed |  |  |  |  |
-| TC-QUO-009 | Quote details are visible when opening a quote record | Not Executed |  |  |  |  |
-| TC-QUO-010 | Public quote access works when available | Not Executed |  |  |  |  |
-| TC-QUO-011 | Quote-related navigation works correctly | Not Executed |  |  |  |  |
-| TC-QUO-012 | Quotes page does not display broken or placeholder information | Not Executed |  |  |  |  |
-| TC-QUO-013 | Quotes page remains usable after refresh | Not Executed |  |  |  |  |
-| TC-QUO-014 | Quotes page is usable on mobile-like viewport | Not Executed |  |  |  |  |
+| TC-QUO-001 | Quotes page loads successfully | Passed | Quotes page loaded successfully. | - | - | Quotes module was accessible and usable. |
+| TC-QUO-002 | Quotes list is visible when records exist | Passed | Existing quotes were displayed correctly. | - | - | Quotes list was visible and readable. |
+| TC-QUO-003 | Quotes empty state is clear when no records exist | Passed | Empty state behavior was validated successfully when applicable. | - | - | Empty state did not appear broken. |
+| TC-QUO-004 | Create quote action is visible when available | Passed | Create quote action was visible and accessible. | - | - | User could access the quote creation flow. |
+| TC-QUO-005 | Create quote with valid required information | Passed | Quote was created successfully with valid information. | - | - | Valid quote creation worked as expected. |
+| TC-QUO-006 | Create quote with required fields empty | Failed | The system allowed quote creation with empty fields or invalid/random data. | evidences/screenshots/BUG-004-quote-created-with-empty-or-invalid-fields.png | BUG-004 | Required field validation did not prevent invalid quote creation. |
+| TC-QUO-007 | Create quote with invalid monetary value | Failed | The system allowed quote creation with text in the monetary value field. | evidences/screenshots/BUG-005-quote-value-accepts-text.png | BUG-005 | Monetary value validation did not work as expected. |
+| TC-QUO-008 | Quote status is visible and understandable | Passed | Quote status was visible and understandable. | - | - | Status information was clear. |
+| TC-QUO-009 | Quote details are visible when opening a quote record | Passed | Quote details were visible when opening a quote record. | - | - | Quote information was readable. |
+| TC-QUO-010 | Public quote access works when available | Passed | Public quote access worked when available. | - | - | Public quote flow behaved as expected in the tested scenario. |
+| TC-QUO-011 | Quote-related navigation works correctly | Passed | Quote-related navigation worked correctly. | - | - | No broken navigation was observed in the tested flow. |
+| TC-QUO-012 | Quotes page does not display broken or placeholder information | Passed | No broken or placeholder information was observed. | - | - | Quotes page looked consistent. |
+| TC-QUO-013 | Quotes page remains usable after refresh | Passed | Quotes page remained usable after refresh. | - | - | Refresh behavior worked as expected. |
+| TC-QUO-014 | Quotes page is usable on mobile-like viewport | Failed | A box overflowed or broke the layout in the mobile-like viewport. | evidences/screenshots/BUG-006-quote-mobile-layout-overflow.png | BUG-006 | Mobile-like layout did not remain fully usable. |
 
 ---
 
@@ -267,6 +267,9 @@ Before starting the execution cycle, confirm the following items:
 | BUG-001 | Client can be created with only the name field filled | Clients | Medium | Medium | Open | evidences/screenshots/BUG-001-client-created-with-only-name.png |
 | BUG-002 | Client can be created without valid contact information | Clients | Medium | Medium | Open | evidences/screenshots/BUG-002-client-invalid-contact-accepted.png |
 | BUG-003 | Delete client action does not remove the client after confirmation | Clients | High | High | Open | evidences/screenshots/BUG-003-delete-client-not-working.png |
+| BUG-004 | Quote can be created with empty or invalid required fields | Quotes | Medium | Medium | Open | evidences/screenshots/BUG-004-quote-created-with-empty-or-invalid-fields.png |
+| BUG-005 | Quote value field accepts text instead of numeric value | Quotes | Medium | Medium | Open | evidences/screenshots/BUG-005-quote-value-accepts-text.png |
+| BUG-006 | Quote layout breaks on mobile-like viewport | Quotes | Medium | Medium | Open | evidences/screenshots/BUG-006-quote-mobile-layout-overflow.png |
 
 ---
 
@@ -278,6 +281,9 @@ Before starting the execution cycle, confirm the following items:
 | EVD-002 | TC-CLI-006 | BUG-001 | Screenshot | evidences/screenshots/BUG-001-client-created-with-only-name.png | Client was created with only the name field filled. |
 | EVD-003 | TC-CLI-007 | BUG-002 | Screenshot | evidences/screenshots/BUG-002-client-invalid-contact-accepted.png | Client was created without valid contact information or with invalid contact information. |
 | EVD-004 | Exploratory finding | BUG-003 | Screenshot | evidences/screenshots/BUG-003-delete-client-not-working.png | Delete client confirmation did not remove the client. |
+| EVD-005 | TC-QUO-006 | BUG-004 | Screenshot | evidences/screenshots/BUG-004-quote-created-with-empty-or-invalid-fields.png | Quote was created with empty or invalid required fields. |
+| EVD-006 | TC-QUO-007 | BUG-005 | Screenshot | evidences/screenshots/BUG-005-quote-value-accepts-text.png | Quote value field accepted text instead of a numeric value. |
+| EVD-007 | TC-QUO-014 | BUG-006 | Screenshot | evidences/screenshots/BUG-006-quote-mobile-layout-overflow.png | Quote layout overflowed or broke in mobile-like viewport. |
 
 Evidence should be stored in:
 
@@ -316,10 +322,9 @@ To be filled during execution.
 | Execution Completed | No |
 | Critical Bugs Found | 0 |
 | High Bugs Found | 1 |
-| Medium Bugs Found | 2 |
+| Medium Bugs Found | 5 |
 | Low Bugs Found | 0 |
 | Overall Result | In progress |
-
 ---
 
 ## 15. Go / No-Go Assessment
