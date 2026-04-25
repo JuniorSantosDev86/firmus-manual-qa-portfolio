@@ -115,11 +115,12 @@ Before starting the execution cycle, confirm the following items:
 
 | Status | Total |
 |---|---:|
-| Passed | 45 |
+| Passed | 58 |
 | Failed | 5 |
 | Blocked | 0 |
-| Not Applicable | 0 |
-| Not Executed | 28 |
+| Not Applicable | 1 |
+| Not Executed | 14 |
+
 ---
 
 
@@ -131,9 +132,10 @@ Before starting the execution cycle, confirm the following items:
 | Dashboard / Control Tower | 12 | 12 | 0 | 0 | 0 | 0 |
 | Clients | 12 | 10 | 2 | 0 | 0 | 0 |
 | Quotes | 14 | 11 | 3 | 0 | 0 | 0 |
-| Financial Overview | 14 | 0 | 0 | 0 | 0 | 14 |
+| Financial Overview | 14 | 13 | 0 | 0 | 1 | 0 |
 | NFSe Foundation | 14 | 0 | 0 | 0 | 0 | 14 |
-| Total | 78 | 45 | 5 | 0 | 0 | 28 |
+| Total | 78 | 58 | 5 | 0 | 1 | 14 |
+
 ---
 
 ## 10. Detailed Test Execution
@@ -222,20 +224,20 @@ Before starting the execution cycle, confirm the following items:
 
 | Test Case ID | Test Case Title | Status | Actual Result | Evidence | Bug ID | Notes |
 |---|---|---|---|---|---|---|
-| TC-FIN-001 | Financial page loads successfully | Not Executed |  |  |  |  |
-| TC-FIN-002 | Financial summary cards are visible | Not Executed |  |  |  |  |
-| TC-FIN-003 | Monetary values are formatted correctly | Not Executed |  |  |  |  |
-| TC-FIN-004 | Financial records are visible when records exist | Not Executed |  |  |  |  |
-| TC-FIN-005 | Financial empty state is clear when no records exist | Not Executed |  |  |  |  |
-| TC-FIN-006 | Financial status indicators are visible and understandable | Not Executed |  |  |  |  |
-| TC-FIN-007 | Financial page does not display negative or inconsistent values unexpectedly | Not Executed |  |  |  |  |
-| TC-FIN-008 | Financial filters work when available | Not Executed |  |  |  |  |
-| TC-FIN-009 | Financial-related navigation works correctly | Not Executed |  |  |  |  |
-| TC-FIN-010 | Financial page does not display broken or placeholder information | Not Executed |  |  |  |  |
-| TC-FIN-011 | Financial page remains usable after refresh | Not Executed |  |  |  |  |
-| TC-FIN-012 | Financial page is readable on desktop viewport | Not Executed |  |  |  |  |
-| TC-FIN-013 | Financial page is usable on mobile-like viewport | Not Executed |  |  |  |  |
-| TC-FIN-014 | Financial information is understandable for the user | Not Executed |  |  |  |  |
+| TC-FIN-001 | Financial page loads successfully | Passed | Financial page loaded successfully. | - | - | Financial module was accessible and usable. |
+| TC-FIN-002 | Financial summary cards are visible | Passed | Financial summary cards were visible. | - | - | The financial view displayed the expected summary cards. |
+| TC-FIN-003 | Monetary values are formatted correctly | Passed | Monetary values were displayed in a clear and readable format. | - | - | Currency information was understandable. |
+| TC-FIN-004 | Financial records are visible when records exist | Passed | Financial information was visible in the current environment. | - | - | Available financial information was displayed correctly. |
+| TC-FIN-005 | Financial empty state is clear when no records exist | Passed | Empty state behavior was clear when applicable. | - | - | The page did not look broken or incomplete. |
+| TC-FIN-006 | Financial status indicators are visible and understandable | Passed | Financial indicators were visible and understandable. | - | - | Status and summary information were clear. |
+| TC-FIN-007 | Financial page does not display negative or inconsistent values unexpectedly | Passed | No unexpected negative, missing, duplicated or inconsistent values were observed. | - | - | Financial values looked consistent with their labels. |
+| TC-FIN-008 | Financial filters work when available | Not Applicable | Financial filters are not available in the current simple financial view. | - | - | The current version displays only summary cards, so there were no filters to validate. |
+| TC-FIN-009 | Financial-related navigation works correctly | Passed | Financial-related navigation worked correctly. | - | - | No broken navigation was observed. |
+| TC-FIN-010 | Financial page does not display broken or placeholder information | Passed | No broken or placeholder information was observed. | - | - | Financial page looked consistent. |
+| TC-FIN-011 | Financial page remains usable after refresh | Passed | Financial page remained usable after refresh. | - | - | Refresh behavior worked as expected. |
+| TC-FIN-012 | Financial page is readable on desktop viewport | Passed | Financial page was readable and organized on desktop viewport. | - | - | Desktop layout passed validation. |
+| TC-FIN-013 | Financial page is usable on mobile-like viewport | Passed | Financial page remained usable on mobile-like viewport. | - | - | No blocking responsive issue was observed. |
+| TC-FIN-014 | Financial information is understandable for the user | Passed | Financial information was clear and understandable for the user. | - | - | The financial view provided useful business visibility. |
 
 ---
 
@@ -294,8 +296,6 @@ evidences/videos/
 
 ---
 
----
-
 ## 13. General Execution Notes
 
 Use this section to document relevant observations from the execution cycle.
@@ -328,6 +328,7 @@ To be filled during execution.
 | Medium Bugs Found | 5 |
 | Low Bugs Found | 0 |
 | Overall Result | In progress |
+
 ---
 
 ## 15. Go / No-Go Assessment
