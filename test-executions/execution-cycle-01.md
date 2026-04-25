@@ -290,6 +290,9 @@ Evidence should be stored in:
 ```txt
 evidences/screenshots/
 evidences/videos/
+```
+
+---
 
 ---
 
