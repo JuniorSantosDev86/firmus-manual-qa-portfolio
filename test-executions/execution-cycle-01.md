@@ -142,8 +142,6 @@ Before starting the execution cycle, confirm the following items:
 
 ### 10.1 Authentication
 
-### 10.1 Authentication
-
 | Test Case ID | Test Case Title | Status | Actual Result | Evidence | Bug ID | Notes |
 |---|---|---|---|---|---|---|
 | TC-AUTH-001 | Login with valid credentials | Passed | Login worked successfully and the user was redirected to the dashboard. | evidences/screenshots/TC-AUTH-001-login-success.png | - | Critical login flow worked as expected. |
