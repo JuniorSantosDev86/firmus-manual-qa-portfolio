@@ -115,12 +115,11 @@ Before starting the execution cycle, confirm the following items:
 
 | Status | Total |
 |---|---:|
-| Passed | 58 |
+| Passed | 72 |
 | Failed | 5 |
 | Blocked | 0 |
 | Not Applicable | 1 |
-| Not Executed | 14 |
-
+| Not Executed | 0 |
 ---
 
 
@@ -133,8 +132,8 @@ Before starting the execution cycle, confirm the following items:
 | Clients | 12 | 10 | 2 | 0 | 0 | 0 |
 | Quotes | 14 | 11 | 3 | 0 | 0 | 0 |
 | Financial Overview | 14 | 13 | 0 | 0 | 1 | 0 |
-| NFSe Foundation | 14 | 0 | 0 | 0 | 0 | 14 |
-| Total | 78 | 58 | 5 | 0 | 1 | 14 |
+| NFSe Foundation | 14 | 14 | 0 | 0 | 0 | 0 |
+| Total | 78 | 72 | 5 | 0 | 1 | 0 |
 
 ---
 
@@ -243,20 +242,20 @@ Before starting the execution cycle, confirm the following items:
 
 | Test Case ID | Test Case Title | Status | Actual Result | Evidence | Bug ID | Notes |
 |---|---|---|---|---|---|---|
-| TC-NFSE-001 | NFSe page loads successfully | Not Executed |  |  |  |  |
-| TC-NFSE-002 | NFSe records are visible when records exist | Not Executed |  |  |  |  |
-| TC-NFSE-003 | NFSe empty state is clear when no records exist | Not Executed |  |  |  |  |
-| TC-NFSE-004 | NFSe fiscal status is visible and understandable | Not Executed |  |  |  |  |
-| TC-NFSE-005 | Provider reference is displayed when available | Not Executed |  |  |  |  |
-| TC-NFSE-006 | Document number is displayed when available | Not Executed |  |  |  |  |
-| TC-NFSE-007 | NFSe issue date or emitted date is displayed when available | Not Executed |  |  |  |  |
-| TC-NFSE-008 | NFSe record information is not duplicated inside the same card | Not Executed |  |  |  |  |
-| TC-NFSE-009 | NFSe page does not display placeholder or broken information | Not Executed |  |  |  |  |
-| TC-NFSE-010 | NFSe-related navigation works correctly | Not Executed |  |  |  |  |
-| TC-NFSE-011 | NFSe page remains usable after refresh | Not Executed |  |  |  |  |
-| TC-NFSE-012 | NFSe page is readable on desktop viewport | Not Executed |  |  |  |  |
-| TC-NFSE-013 | NFSe page is usable on mobile-like viewport | Not Executed |  |  |  |  |
-| TC-NFSE-014 | NFSe information is understandable for the user | Not Executed |  |  |  |  |
+| TC-NFSE-001 | NFSe page loads successfully | Passed | NFSe page loaded successfully. | - | - | NFSe module was accessible and usable. |
+| TC-NFSE-002 | NFSe records are visible when records exist | Passed | NFSe records were visible when records existed. | - | - | Records were displayed correctly. |
+| TC-NFSE-003 | NFSe empty state is clear when no records exist | Passed | Empty state behavior was clear when applicable. | - | - | Empty state did not look broken. |
+| TC-NFSE-004 | NFSe fiscal status is visible and understandable | Passed | Fiscal status information was visible and understandable. | - | - | Status labels were clear. |
+| TC-NFSE-005 | Provider reference is displayed when available | Passed | Provider reference was displayed when available. | - | - | Provider reference information appeared correctly. |
+| TC-NFSE-006 | Document number is displayed when available | Passed | Document number was displayed when available. | - | - | Document number information appeared correctly. |
+| TC-NFSE-007 | NFSe issue date or emitted date is displayed when available | Passed | NFSe issue/emitted date was displayed when available. | - | - | Date information was readable. |
+| TC-NFSE-008 | NFSe record information is not duplicated inside the same card | Passed | No duplicated NFSe information was observed inside the same card. | - | - | Previous duplication risk was not observed. |
+| TC-NFSE-009 | NFSe page does not display placeholder or broken information | Passed | No placeholder or broken information was observed. | - | - | NFSe page looked consistent. |
+| TC-NFSE-010 | NFSe-related navigation works correctly | Passed | NFSe-related navigation worked correctly. | - | - | No broken navigation was observed. |
+| TC-NFSE-011 | NFSe page remains usable after refresh | Passed | NFSe page remained usable after refresh. | - | - | Refresh behavior worked as expected. |
+| TC-NFSE-012 | NFSe page is readable on desktop viewport | Passed | NFSe page was readable and organized on desktop viewport. | - | - | Desktop layout passed validation. |
+| TC-NFSE-013 | NFSe page is usable on mobile-like viewport | Passed | NFSe page remained usable on mobile-like viewport. | - | - | Mobile-like layout passed validation. |
+| TC-NFSE-014 | NFSe information is understandable for the user | Passed | NFSe information was clear and understandable for the user. | - | - | The page communicated fiscal information clearly. |
 
 ---
 
@@ -320,12 +319,12 @@ To be filled during execution.
 | Field | Result |
 |---|---|
 | Execution Started | Yes |
-| Execution Completed | No |
+| Execution Completed | Yes |
 | Critical Bugs Found | 0 |
 | High Bugs Found | 1 |
 | Medium Bugs Found | 5 |
 | Low Bugs Found | 0 |
-| Overall Result | In progress |
+| Overall Result | Completed with known issues |
 
 ---
 
